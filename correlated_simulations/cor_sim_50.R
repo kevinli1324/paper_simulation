@@ -1,6 +1,8 @@
 source("correlated_sim.R")
 source("pca_functions.R")
 source("t_sim_functions.R")
+real_counts <- read.delim("gene_counts.tab.txt", quote = "", as.is = T)
+
 for(i in 1:100){
   simulation_object <- cor_wrapper(num_clusters = 30, n_experiments = 162, max_group = 8, prop_affec = .5, mean0_vec = real_counts$set1IT002.Time0)
   #t_matrix

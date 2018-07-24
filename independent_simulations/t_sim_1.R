@@ -1,5 +1,6 @@
 source("pca_functions.R")
 source("t_sim_functions.R")
+real_counts <- read.delim("gene_counts.tab.txt", quote = "", as.is = T)
 
 for(i in 1:100){
   foo <- gen_t_data(100, 162, 1)
